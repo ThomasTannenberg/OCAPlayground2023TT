@@ -25,7 +25,7 @@ public class RechnerTestErweiterung {
 
         } catch (InputMismatchException e) {
             System.out.println("Falsche eingabe");
-            return;
+
 
         } finally {
             scanner.close();
