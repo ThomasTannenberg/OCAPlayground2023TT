@@ -18,5 +18,8 @@ public class Protokoll {
         return "Operation: " + operation + ", Zahl 1  " + zahl1 + ", Zahl 2: " + zahl2 + ", Ergebnis: " + ergebnis;
     }
 
+
 }
+
+
 

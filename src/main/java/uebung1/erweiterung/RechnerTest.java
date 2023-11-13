@@ -9,8 +9,8 @@ public class RechnerTest {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            double a = 0;
-            double b = 0;
+            double a;
+            double b;
 
             try {
                 System.out.println("Erste Zahl bitte:");
