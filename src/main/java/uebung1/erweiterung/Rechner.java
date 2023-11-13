@@ -1,11 +1,13 @@
 package uebung1.erweiterung;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Rechner {
 
     public static List<Protokoll> protokoll = new ArrayList<>();
+
 
     public static void addieren(double zahl1, double zahl2) {
         double ergebnis = zahl1 + zahl2;
@@ -38,8 +40,9 @@ public class Rechner {
     }
 
     public static void druckeProtokoll() {
+        Date jetzt = new Date();
         int i = 0;
-        System.out.println("Protokoll:");
+        System.out.println("Protokoll vom " + jetzt);
         for (Protokoll prot : protokoll) {
             i++;
             System.out.println(i + ". " + prot);
