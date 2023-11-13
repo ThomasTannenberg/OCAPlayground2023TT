@@ -2,7 +2,6 @@ package uebung1;
 
 public class Rechner {
 
-
     public static double addieren(double zahl1, double zahl2) {
         return zahl1 + zahl2;
     }
@@ -11,15 +10,18 @@ public class Rechner {
         return zahl1 - zahl2;
     }
 
-    public static double multiplizieren(double zahl1, double zahl) {
-        return zahl1 * zahl;
+    public static double multiplizieren(double zahl1, double zahl2) {
+        return zahl1 * zahl2;
     }
 
     public static double dividieren(double zahl1, double zahl2) {
-        if (zahl2 == 0) {
-            System.out.println("Durch 0 teilen ist nicht erlaubt.");
+        try {
+            return zahl1 / zahl2;
+        } catch (ArithmeticException e) {
+            System.out.println("Nicht durch null teilen! " + e.getMessage());
+            return 0.0;
         }
-        return zahl1 / zahl2;
     }
 }
+
 

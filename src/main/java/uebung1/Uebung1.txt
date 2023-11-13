@@ -1,0 +1,15 @@
+Übung 1
+Schreibe ein Taschenrechner Programm bestehend aus 2 Klassen.
+Eine Klasse mit dem Namen „Rechner“, die Methoden für die 4 Grundrechenarten enthält.
+Jede Methode nimmt zwei Zahlen-Parameter entgegen und gibt das berechnete Ergebnis
+zurück.
+Die zweite Klasse heißt „RechnerTest“ und ist der Einstieg in das Programm.
+Entscheide, ob die Methoden der Klasse „Rechner“ als Instanz- oder Klassenmethoden
+umgesetzt werden müssten.
+
+Erweiterung
+Der Taschenrechner soll um ein Protokoll erweitert werden. Das Protokoll kann über eine
+Methode ausgegeben werden. Für jede ausgeführte Operation zeigt es die Operanden, den
+verwendeten Operator und das Ergebnis.
+Entscheide, jetzt erneut ob die Methoden der Klasse „Rechner“ als Instanz- oder
+Klassenmethoden umgesetzt werden müssten.

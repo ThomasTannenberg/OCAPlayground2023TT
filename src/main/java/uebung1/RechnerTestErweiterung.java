@@ -3,7 +3,7 @@ package uebung1;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class RechnerTest {
+public class RechnerTestErweiterung {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -16,6 +16,10 @@ public class RechnerTest {
             a = scanner.nextDouble();
             System.out.println("Zweite Zahl bitte:");
             b = scanner.nextDouble();
+            RechnerErweiterung.addieren(a, b);
+            RechnerErweiterung.subtrahieren(a, b);
+            RechnerErweiterung.multiplizieren(a, b);
+            RechnerErweiterung.dividieren(a, b);
 
         } catch (InputMismatchException e) {
             System.out.println("Falsche eingabe");
@@ -23,15 +27,11 @@ public class RechnerTest {
 
         } finally {
             scanner.close();
+            RechnerErweiterung.druckeProtokoll();
             System.out.println("Bye Bye!");
+
         }
 
-        System.out.println("Addition: " + Rechner.addieren(a, b));
-        System.out.println("Subtraktion: " + Rechner.subtrahieren(a, b));
-        System.out.println("Multiplikation: " + Rechner.multiplizieren(a, b));
-        System.out.println("Division: " + Rechner.dividieren(a, b));
 
     }
 }
-
-
