@@ -17,7 +17,7 @@ public class Rechner {
 
     public static double dividieren(double zahl1, double zahl2) {
         if (zahl2 == 0) {
-            System.out.println("Division durch Null ist nicht erlaubt.");
+            System.out.println("Durch 0 teilen ist nicht erlaubt.");
         }
         return zahl1 / zahl2;
     }
