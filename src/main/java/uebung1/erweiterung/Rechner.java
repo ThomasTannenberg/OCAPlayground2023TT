@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rechner {
+
     public static List<Protokoll> protokoll = new ArrayList<>();
 
     public static double addieren(double zahl1, double zahl2) {
@@ -36,8 +37,6 @@ public class Rechner {
 
         return ergebnis;
     }
-
-
 
     public static void druckeProtokoll() {
         for (Protokoll prot : protokoll) {
