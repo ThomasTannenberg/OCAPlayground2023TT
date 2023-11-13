@@ -3,7 +3,7 @@ package uebung1.erweiterung;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RechnerErweiterung {
+public class Rechner {
     public static List<Protokoll> protokoll = new ArrayList<>();
 
     public static double addieren(double zahl1, double zahl2) {
