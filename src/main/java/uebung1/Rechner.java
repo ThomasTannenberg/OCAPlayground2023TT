@@ -15,11 +15,10 @@ public class Rechner {
     }
 
     public static double dividieren(double zahl1, double zahl2) {
-        try {
+        if (zahl2 == 0) {
+            throw new IllegalArgumentException("Division durch 0");
+        } else {
             return zahl1 / zahl2;
-        } catch (ArithmeticException e) {
-            System.out.println("Nicht durch null teilen! " + e.getMessage());
-            return 0.0;
         }
     }
 }
