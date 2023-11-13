@@ -24,7 +24,7 @@ public class RechnerTest {
                 Rechner.dividieren(a, b);
 
 
-                System.out.println("Möchten Sie fortfahren? (ja/nein)");
+                System.out.println("Fortfahren? (ja/nein)");
                 String antwort = scanner.next();
                 if (antwort.equalsIgnoreCase("nein")) {
                     break;
