@@ -1,4 +1,6 @@
-package uebung1;
+package uebung1.erweiterung;
+
+import uebung1.erweiterung.RechnerErweiterung;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

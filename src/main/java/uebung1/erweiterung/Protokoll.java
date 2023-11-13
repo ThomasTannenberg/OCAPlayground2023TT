@@ -1,4 +1,4 @@
-package uebung1;
+package uebung1.erweiterung;
 
 public class Protokoll {
     private String operation;

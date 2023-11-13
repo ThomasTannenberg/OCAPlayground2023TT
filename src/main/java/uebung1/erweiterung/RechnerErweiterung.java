@@ -1,4 +1,4 @@
-package uebung1;
+package uebung1.erweiterung;
 
 import java.util.ArrayList;
 import java.util.List;
