@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="OCAPlaygroundTT:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/OCAPlaygroundTT_jar</output-path>
+    <root id="archive" name="OCAPlaygroundTT.jar">
+      <element id="module-output" name="OCAPlaygroundTT" />
+    </root>
+  </artifact>
+</component>
