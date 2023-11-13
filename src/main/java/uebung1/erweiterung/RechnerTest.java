@@ -1,7 +1,5 @@
 package uebung1.erweiterung;
 
-
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -10,31 +8,37 @@ public class RechnerTest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double a = 0;
-        double b = 0;
+        while (true) {
+            double a = 0;
+            double b = 0;
 
-        try {
-            System.out.println("Erste Zahl bitte:");
-            a = scanner.nextDouble();
-            System.out.println("Zweite Zahl bitte:");
-            b = scanner.nextDouble();
+            try {
+                System.out.println("Erste Zahl bitte:");
+                a = scanner.nextDouble();
+                System.out.println("Zweite Zahl bitte:");
+                b = scanner.nextDouble();
 
-            Rechner.addieren(a, b);
-            Rechner.subtrahieren(a, b);
-            Rechner.multiplizieren(a, b);
-            Rechner.dividieren(a, b);
-
-        } catch (InputMismatchException e) {
-            System.out.println("Falsche eingabe");
+                Rechner.addieren(a, b);
+                Rechner.subtrahieren(a, b);
+                Rechner.multiplizieren(a, b);
+                Rechner.dividieren(a, b);
 
 
-        } finally {
-            scanner.close();
-            Rechner.druckeProtokoll();
-            System.out.println("Bye Bye!");
+                System.out.println("Möchten Sie fortfahren? (ja/nein)");
+                String antwort = scanner.next();
+                if (antwort.equalsIgnoreCase("nein")) {
+                    break;
+                }
 
+            } catch (InputMismatchException e) {
+                System.out.println("Falsche Eingabe");
+                scanner.next();
+            }
         }
 
 
+        Rechner.druckeProtokoll();
+        System.out.println("Bye Bye!");
+        scanner.close();
     }
 }

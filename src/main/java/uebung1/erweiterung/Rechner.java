@@ -39,6 +39,7 @@ public class Rechner {
     }
 
     public static void druckeProtokoll() {
+        System.out.println("Protokoll:");
         for (Protokoll prot : protokoll) {
             System.out.println(prot);
         }
