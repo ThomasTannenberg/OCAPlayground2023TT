@@ -16,7 +16,9 @@ public class Rechner {
 
     public static double dividieren(double zahl1, double zahl2) {
         if (zahl2 == 0) {
-            throw new IllegalArgumentException("Division durch 0");
+            System.out.println("Nicht durch null teilen!");
+            return 0;
+//            throw new IllegalArgumentException("Nicht durch null teilen!");
         } else {
             return zahl1 / zahl2;
         }
