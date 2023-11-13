@@ -1,6 +1,6 @@
 package uebung1.erweiterung;
 
-import uebung1.erweiterung.RechnerErweiterung;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -18,6 +18,7 @@ public class RechnerTestErweiterung {
             a = scanner.nextDouble();
             System.out.println("Zweite Zahl bitte:");
             b = scanner.nextDouble();
+
             RechnerErweiterung.addieren(a, b);
             RechnerErweiterung.subtrahieren(a, b);
             RechnerErweiterung.multiplizieren(a, b);
