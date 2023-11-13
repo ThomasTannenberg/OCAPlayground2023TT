@@ -15,7 +15,8 @@ public class Protokoll {
 
     @Override
     public String toString() {
-        return "Operation: " + operation + ", Zahl1: " + zahl1 + ", Zahl2: " + zahl2 + ", Ergebnis: " + ergebnis;
+        return "Operation: " + operation + ", Zahl1  " + zahl1 + ", Zahl2: " + zahl2 + ", Ergebnis: " + ergebnis;
     }
+
 }
 
