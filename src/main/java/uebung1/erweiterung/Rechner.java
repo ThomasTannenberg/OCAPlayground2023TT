@@ -7,25 +7,25 @@ public class Rechner {
 
     public static List<Protokoll> protokoll = new ArrayList<>();
 
-    public static double addieren(double zahl1, double zahl2) {
+    public static void addieren(double zahl1, double zahl2) {
         double ergebnis = zahl1 + zahl2;
         protokoll.add(new Protokoll("Addition", zahl1, zahl2, ergebnis));
-        return ergebnis;
+
     }
 
-    public static double subtrahieren(double zahl1, double zahl2) {
+    public static void subtrahieren(double zahl1, double zahl2) {
         double ergebnis = zahl1 - zahl2;
         protokoll.add(new Protokoll("Subtraktion", zahl1, zahl2, ergebnis));
-        return ergebnis;
+
     }
 
-    public static double multiplizieren(double zahl1, double zahl2) {
+    public static void multiplizieren(double zahl1, double zahl2) {
         double ergebnis = zahl1 * zahl2;
         protokoll.add(new Protokoll("Multiplikation", zahl1, zahl2, ergebnis));
-        return ergebnis;
+
     }
 
-    public static double dividieren(double zahl1, double zahl2) {
+    public static void dividieren(double zahl1, double zahl2) {
         double ergebnis = zahl1 / zahl2;
 
         if (ergebnis == Double.POSITIVE_INFINITY || ergebnis == Double.NEGATIVE_INFINITY) {
@@ -35,7 +35,6 @@ public class Rechner {
             protokoll.add(new Protokoll("Division", zahl1, zahl2, ergebnis));
         }
 
-        return ergebnis;
     }
 
     public static void druckeProtokoll() {
@@ -43,7 +42,6 @@ public class Rechner {
         System.out.println("Protokoll:");
         for (Protokoll prot : protokoll) {
             i++;
-
             System.out.println(i + ". " + prot);
         }
     }
