@@ -28,7 +28,7 @@ public class Rechner {
         double ergebnis = zahl1 / zahl2;
 
         if (ergebnis == Double.POSITIVE_INFINITY || ergebnis == Double.NEGATIVE_INFINITY) {
-            System.out.println("Nicht durch Null teilen: Ergebnis ist " + ergebnis);
+            System.out.println("Nö, nicht durch 0 teilen! Ergebnis ist " + ergebnis);
             protokoll.add(new Protokoll("Division Fehlgeschlagen!", zahl1, zahl2, ergebnis));
         } else {
             protokoll.add(new Protokoll("Division", zahl1, zahl2, ergebnis));
