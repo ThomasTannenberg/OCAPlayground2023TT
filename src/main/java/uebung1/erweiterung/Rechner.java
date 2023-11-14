@@ -47,6 +47,7 @@ public class Rechner {
 
 
         for (Protokoll prot: protokoll){
+            i++;
             System.out.println(i + ". " + prot);
         }
 
