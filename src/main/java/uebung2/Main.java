@@ -1,31 +1,40 @@
 package uebung2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        while (true) {
+            try {
+                List<Wuerfel> wuerfelListe = new ArrayList<>();
+                System.out.print("Geben Sie die Würfeltypen getrennt durch Leerzeichen ein (4 6 8 10 12 20 100) oder 'exit' zum Beenden: ");
+                String eingabe = scanner.nextLine();
 
-        try {
-            // Eingabe: Anzahl der Würfel
-            System.out.print("Anzahl der Würfel: ");
-            int anzahlWuerfel = scanner.nextInt();
+                if ("exit".equalsIgnoreCase(eingabe)) {
+                    break;
+                }
 
-            // Eingabe: Typ des Würfels
-            System.out.print("Typ des Würfels (4, 6, 8, 10, 12, 20, 100): ");
-            int seiten = scanner.nextInt();
-
-            Wuerfel wuerfelTyp = Wuerfel.erstelleWuerfel(seiten);
-            WuerfelBecher becher = new WuerfelBecher(wuerfelTyp, anzahlWuerfel, scanner);
-            becher.spielen();
-        } catch (Exception e) {
-            System.out.println("Es ist ein Fehler aufgetreten: " + e.getMessage());
-        } finally {
-            scanner.close();
+                String[] wuerfelTypen = eingabe.split(" ");
+                for (String typ : wuerfelTypen) {
+                    int seiten = Integer.parseInt(typ);
+                    if (seiten == 4 || seiten == 6 || seiten == 8 || seiten == 10 || seiten == 12 || seiten == 20 || seiten == 100) {
+                        wuerfelListe.add(Wuerfel.erstelleWuerfel(seiten));
+                    } else {
+                        System.out.println("Ungültiger Würfeltyp: " + seiten);
+                    }
+                }
+                if (!wuerfelListe.isEmpty()) {
+                    WuerfelBecher becher = new WuerfelBecher(wuerfelListe, scanner);
+                    becher.spielen();
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ungültige Eingabe. Bitte geben Sie nur Zahlen ein.");
+            }
         }
+        scanner.close();
+        System.out.println("Spiel beendet.");
     }
 }
-
-
-

@@ -1,36 +1,45 @@
 package uebung2;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
-public class WuerfelBecher extends BecherAbstrakt {
+public class WuerfelBecher {
+    private Random random;
     private Scanner scanner;
+    private List<Wuerfel> wuerfelListe;
+    private Protokoll protokoll;
 
-    public WuerfelBecher(Wuerfel wuerfelTyp, int anzahlWuerfel, Scanner scanner) {
-        super(wuerfelTyp, anzahlWuerfel);
+    public WuerfelBecher(List<Wuerfel> wuerfelListe, Scanner scanner) {
+        this.random = new Random();
+        this.wuerfelListe = wuerfelListe;
         this.scanner = scanner;
+        this.protokoll = new Protokoll();
     }
 
     public void spielen() {
-        Scanner scanner = new Scanner(System.in);
-
         try {
-            // Eingabe: Anzahl der Würfe
             System.out.print("Anzahl der Würfe: ");
             int anzahlWuerfe = scanner.nextInt();
 
-            // Würfe durchführen und Ergebnisse anzeigen
             for (int i = 0; i < anzahlWuerfe; i++) {
-                int[] ergebnisse = werfeMehrere();
-                int[] zaehler = auswerten(ergebnisse);
-                ausgeben(zaehler);
+                List<Integer> ergebnisse = werfeMehrere();
+                protokoll.ausgeben(ergebnisse, wuerfelListe, i + 1);
             }
         } catch (InputMismatchException e) {
-
             System.out.println("Ungültige Eingabe. Bitte geben Sie eine ganze Zahl ein.");
-        } finally {
-
-            scanner.close();
+            scanner.next();
         }
     }
+
+    private List<Integer> werfeMehrere() {
+        List<Integer> ergebnisse = new ArrayList<>();
+        for (Wuerfel w : wuerfelListe) {
+            ergebnisse.add(random.nextInt(w.getSeiten()) + 1);
+        }
+        return ergebnisse;
+    }
 }
+
