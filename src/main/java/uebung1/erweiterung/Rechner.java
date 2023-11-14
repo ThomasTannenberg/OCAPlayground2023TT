@@ -41,15 +41,20 @@ public class Rechner {
 
     public static void druckeProtokoll() {
         Date jetzt = new Date();
+        StringBuilder sb = new StringBuilder();
 
-        System.out.println("Protokoll - " + jetzt);
-        System.out.println("------------------------------------------------------");
+        sb.append("Protokoll - ").append(jetzt).append("\n");
+        sb.append("------------------------------------------------------\n");
 
         for (int i = 0; i < protokoll.size(); i++) {
-            System.out.println(i + ": " + protokoll.get(i));
+            sb.append(i).append(": ").append(protokoll.get(i)).append("\n");
         }
-        System.out.println("------------------------------------------------------");
+
+        sb.append("------------------------------------------------------\n");
+
+        System.out.println(sb.toString());
     }
+
 
 }
 
