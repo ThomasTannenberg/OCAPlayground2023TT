@@ -1,38 +1,49 @@
 package uebung2;
 
 import java.util.Random;
-import java.util.Scanner;
-
 
 public abstract class BecherAbstrakt {
-    private Random random;
+    protected Random random;
+    protected int anzahlWuerfel;
+    protected Wuerfel wuerfelTyp;
 
-
-    public BecherAbstrakt() {
-        random = new Random();
-
+    public BecherAbstrakt(Wuerfel wuerfelTyp, int anzahlWuerfel) {
+        this.random = new Random();
+        this.wuerfelTyp = wuerfelTyp;
+        this.anzahlWuerfel = anzahlWuerfel;
     }
 
-    protected int werfeEinen(int Seiten) {
-        return random.nextInt(Seiten) + 1;
+    public int werfeEinen() {
+        return random.nextInt(wuerfelTyp.getSeiten()) + 1;
     }
 
-    protected int[] werfeMehrere(int anzahl, int Seiten) {
-        int[] ergebnisse = new int[anzahl];
-        for (int i = 0; i < anzahl; i++) {
-            ergebnisse[i] = werfeEinen(Seiten);
+    public int[] werfeMehrere() {
+        int[] ergebnisse = new int[anzahlWuerfel];
+        for (int i = 0; i < anzahlWuerfel; i++) {
+            ergebnisse[i] = werfeEinen();
         }
         return ergebnisse;
     }
 
-    public void ausgabe(int[] wuerfe) {
-        for (int i = 0; i < wuerfe.length; i++) {
-            System.out.println("" + (i + 1) + " mal " + wuerfe[i]);
+    public int[] auswerten(int[] ergebnisse) {
+        int[] zaehler = new int[wuerfelTyp.getSeiten()];
+
+        for (int ergebnis : ergebnisse) {
+            zaehler[ergebnis - 1]++;
         }
+
+        return zaehler;
     }
 
-    protected abstract void auswerten(int[] wuerfe);
-
-    protected abstract void spielen();
+    public void ausgeben(int[] zaehler) {
+        System.out.println("Ergebnisse für Würfeltyp W" + wuerfelTyp.getSeiten() + ":");
+        for (int i = 0; i < zaehler.length; i++) {
+            System.out.println("Wurfergebnis: " + zaehler[i] + " mal " + (i + 1));
+        }
+    }
 }
+
+
+
+
 
