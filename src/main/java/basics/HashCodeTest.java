@@ -23,7 +23,10 @@ public class HashCodeTest {
         User u = new User();
         u.hashCode();
 
+
         System.out.println(u); // to.String methode. Hier überschrieben in der User Klasse.
+
+        System.out.println(new KlasseA());
 
 
 
