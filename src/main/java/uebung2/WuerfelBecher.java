@@ -41,9 +41,7 @@ public class WuerfelBecher {
             System.out.println("Ungültige Eingabe. Bitte geben Sie eine ganze Zahl ein.");
             scanner.next();
         }
-        finally {
-            scanner.close();
-        }
+
     }
 
 
