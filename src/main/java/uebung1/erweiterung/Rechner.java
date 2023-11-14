@@ -41,7 +41,7 @@ public class Rechner {
 
     public static void druckeProtokoll() {
         Date jetzt = new Date();
-        int i = 0
+        int i = 0;
         System.out.println("Protokoll - " + jetzt);
         System.out.println("------------------------------------------------------");
 
