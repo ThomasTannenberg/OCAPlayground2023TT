@@ -12,11 +12,20 @@ public class WuerfelBecher {
     private List<Wuerfel> wuerfelListe;
     private Protokoll protokoll;
 
-    public WuerfelBecher(List<Wuerfel> wuerfelListe, Scanner scanner) {
+    public WuerfelBecher(List<Wuerfel> wuerfelListe) {
         this.random = new Random();
+        this.scanner = new Scanner(System.in);
         this.wuerfelListe = wuerfelListe;
-        this.scanner = scanner;
         this.protokoll = new Protokoll();
+    }
+
+    private List<Integer> werfeMehrere() {
+        List<Integer> ergebnisse = new ArrayList<>();
+
+        for (Wuerfel w : wuerfelListe) {
+            ergebnisse.add(random.nextInt(w.getSeiten()) + 1);
+        }
+        return ergebnisse;
     }
 
     public void spielen() {
@@ -32,14 +41,11 @@ public class WuerfelBecher {
             System.out.println("Ungültige Eingabe. Bitte geben Sie eine ganze Zahl ein.");
             scanner.next();
         }
+        finally {
+            scanner.close();
+        }
     }
 
-    private List<Integer> werfeMehrere() {
-        List<Integer> ergebnisse = new ArrayList<>();
-        for (Wuerfel w : wuerfelListe) {
-            ergebnisse.add(random.nextInt(w.getSeiten()) + 1);
-        }
-        return ergebnisse;
-    }
+
 }
 

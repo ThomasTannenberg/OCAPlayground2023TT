@@ -36,7 +36,6 @@ class Wuerfel {
         return new Wuerfel(20);
     }
 
-
     public static Wuerfel W100() {
         return new Wuerfel(100);
     }
