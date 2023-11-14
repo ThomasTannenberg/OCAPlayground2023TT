@@ -48,8 +48,7 @@ public class Rechner {
         for (int i = 0; i < protokoll.size(); i++) {
             System.out.println(i + ": " + protokoll.get(i));
         }
-
-
+        System.out.println("------------------------------------------------------");
     }
 
 }
