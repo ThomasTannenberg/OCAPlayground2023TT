@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Roboter roboter = new Roboter();
-        Spielfeld.erstelleSpielfeld();
+        roboter.bewege("W");
 
         while (true) {
             System.out.println("Bewege den Roboter (W, A, S, D) oder beende das Spiel (X): ");
@@ -36,6 +36,7 @@ public class Main {
         }
         scanner.close();
     }
+
 }
 
 
