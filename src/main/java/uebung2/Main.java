@@ -13,7 +13,8 @@ public class Main {
             try {
                 List<Wuerfel> wuerfelListe = new ArrayList<>();
                 System.out.println("Dovie'andi se tovya sagain. (It's time to toss the dice.) ~ Mat Cauthon");
-                System.out.println("Geben Sie die Würfeltypen getrennt durch Leerzeichen ein (4 6 8 10 12 20 100) oder 'exit' zum Beenden: ");
+                System.out.println("Geben Sie die Würfel getrennt durch Leerzeichen ein " +
+                        "(4 6 8 10 12 20 100) oder 'exit' zum exit (d'oh...): ");
                 String eingabe = scanner.nextLine();
 
 
