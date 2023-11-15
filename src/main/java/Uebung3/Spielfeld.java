@@ -24,7 +24,6 @@ public class Spielfeld {
         bewegeKonsole();
         int[][] spielfeld = updateSpielfeld(x, y);
 
-
         for (Monster monster : monsterListe) {
             spielfeld[monster.getX()][monster.getY()] = 9;
         }
@@ -55,15 +54,7 @@ public class Spielfeld {
         for (int j = 0; j < 2; j++) {
             System.out.println("\n");
         }
-
-        runde++;
         System.out.println("__________________");
-        System.out.println("Runde: " + runde);
-
-        if (runde % 3 == 0) {
-            monsterListe.add(new Monster());
-        }
-
     }
 
     public static void bewegeMonster(int roboterX, int roboterY) {
@@ -72,6 +63,9 @@ public class Spielfeld {
         }
     }
 
+    public static void addMonster() {
+        monsterListe.add(new Monster());
+    }
 
 
 

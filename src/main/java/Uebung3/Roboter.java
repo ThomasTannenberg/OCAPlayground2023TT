@@ -16,8 +16,9 @@ class Roboter {
                 case 'S': x = Math.min(x + 1, Spielfeld.GROESSE - 1); break;
                 case 'W': x = Math.max(x - 1, 0); break;
             }
-            Spielfeld.druckeSpielfeld(x, y);
+
         }
+        Spielfeld.druckeSpielfeld(x, y);
     }
 
     public int getX() {
