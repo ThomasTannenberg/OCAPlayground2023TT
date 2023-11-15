@@ -8,7 +8,7 @@ public class Erweiterung2 {
     }
 
     public static void druckeZahlenHaeufigkeit(int[] zahlen) {
-        // Array zur Speicherung der Häufigkeiten, Index 0 wird nicht verwendet
+
         int[] haeufigkeiten = new int[7];
 
         // Zähle die Häufigkeit jeder Zahl
