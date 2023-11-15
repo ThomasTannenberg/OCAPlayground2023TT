@@ -11,14 +11,14 @@ public class Erweiterung2 {
 
         int[] haeufigkeiten = new int[7];
 
-        // Zähle die Häufigkeit jeder Zahl
+
         for (int zahl : zahlen) {
             if (zahl >= 1 && zahl <= 6) {
                 haeufigkeiten[zahl]++;
             }
         }
 
-        // Formatiere und gebe das Ergebnis aus
+
         System.out.print("Wurfergebnis: ");
         for (int i = 1; i < haeufigkeiten.length; i++) {
             System.out.print(haeufigkeiten[i] + " mal " + i);
