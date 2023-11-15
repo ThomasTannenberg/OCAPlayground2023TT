@@ -9,17 +9,15 @@ public class Main {
         Spielfeld.erstelleSpielfeld();
 
         while (true) {
-            System.out.println("Bewege den Roboter (w, a , s, d) oder beende das Spiel (X): ");
-            String richtungen = scanner.nextLine().trim().toLowerCase();
-
+            System.out.println("Bewege den Roboter (W, A, S, D) oder beende das Spiel (X): ");
+            String richtungen = scanner.next().trim().toUpperCase();
 
             if (richtungen.equals("X")) {
                 System.out.println("Spiel beendet.");
                 break;
             }
 
-
-            if (!richtungen.matches("[wasd]+")) {
+            if (!richtungen.matches("[WASD]+")) {
                 System.out.println("Ungültige Eingabe. Bitte verwende nur W, A, S, D.");
                 continue;
             }
@@ -31,6 +29,7 @@ public class Main {
         scanner.close();
     }
 }
+
 
 
 

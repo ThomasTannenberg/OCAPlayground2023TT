@@ -24,17 +24,17 @@ public class Spielfeld {
         bewegeKonsole();
         int[][] spielfeld = updateSpielfeld(x, y);
 
-        // Update das Spielfeld mit den Positionen der Monster
+
         for (Monster monster : monsterListe) {
-            spielfeld[monster.getX()][monster.getY()] = 9; // Eine andere Zahl für Monster
+            spielfeld[monster.getX()][monster.getY()] = 9;
         }
 
         for (int i = 0; i < GROESSE; i++) {
             for (int j = 0; j < GROESSE; j++) {
                 if (spielfeld[i][j] == 8) {
-                    System.out.print(Farben.BLAU + "R" + Farben.RESET + " "); // Blau für den Roboter
+                    System.out.print(Farben.BLAU + "R" + Farben.RESET + " ");
                 } else if (spielfeld[i][j] == 9) {
-                    System.out.print(Farben.ROT + "M" + Farben.RESET + " "); // Rot für das Monster
+                    System.out.print(Farben.ROT + "M" + Farben.RESET + " ");
                 } else {
                     System.out.print(spielfeld[i][j] + " ");
                 }
