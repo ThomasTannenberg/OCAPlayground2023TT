@@ -23,6 +23,8 @@ abstract class Fahrzeug {
     private String makre;
     private int baujahr;
 
+    
+
     public String getRegistration() {
         return registration;
     }
