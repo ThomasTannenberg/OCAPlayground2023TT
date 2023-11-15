@@ -1,7 +1,5 @@
 package Uebung3;
-
 import java.util.Random;
-
 class Monster {
     private int x, y;
     private static Random random = new Random();

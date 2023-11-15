@@ -1,14 +1,11 @@
 package Uebung3;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class Spielfeld {
     public static final int GROESSE = 10;
     public static int runde = 0;
 
     private static List<Monster> monsterListe = new ArrayList<>();
-
 
     public static int[][] erstelleSpielfeld() {
         int[][] spielfeld = new int[GROESSE][GROESSE];
@@ -43,7 +40,6 @@ public class Spielfeld {
         System.out.println("__________________");
     }
 
-
     public static int[][] updateSpielfeld(int x, int y) {
         int[][] spielfeld = erstelleSpielfeld();
         spielfeld[x][y] = 8;
@@ -66,9 +62,6 @@ public class Spielfeld {
     public static void addMonster() {
         monsterListe.add(new Monster());
     }
-
-
-
 }
 
 

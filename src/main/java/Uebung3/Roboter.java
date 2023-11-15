@@ -1,5 +1,4 @@
 package Uebung3;
-
 class Roboter {
     private int x, y;
 
@@ -7,7 +6,6 @@ class Roboter {
         x = 0;
         y = 0;
     }
-
     public void bewege(String richtungen) {
         for (char richtung : richtungen.toCharArray()) {
             switch (richtung) {
@@ -20,11 +18,9 @@ class Roboter {
         }
         Spielfeld.druckeSpielfeld(x, y);
     }
-
     public int getX() {
         return x;
     }
-
     public int getY() {
         return y;
     }
