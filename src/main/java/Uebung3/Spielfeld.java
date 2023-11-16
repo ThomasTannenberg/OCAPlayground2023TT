@@ -2,7 +2,7 @@ package Uebung3;
 import java.util.ArrayList;
 import java.util.List;
 public class Spielfeld {
-    public static final int GROESSE = 10;
+    public static final int GROESSE = 12;
     public static int runde = 0;
 
     private static List<Monster> monsterListe = new ArrayList<>();

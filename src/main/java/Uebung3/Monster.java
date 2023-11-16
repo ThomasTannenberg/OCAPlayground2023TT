@@ -26,7 +26,7 @@ class Monster {
 
 
         if (x == roboterX && y == roboterY) {
-            System.out.println("GAME OVER: YOU WERE EATEN");
+            System.out.println("GAME OVER: YOU'VE BEEN EATEN");
             System.exit(0);
         }
     }
