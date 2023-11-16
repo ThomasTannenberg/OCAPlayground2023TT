@@ -18,8 +18,8 @@ public class Produkt {
         this.menge = menge;
     }
 
-    public Date getJetzt() {
-        return jetzt;
+    public double getPreis() {
+        return preis;
     }
 
     public void setJetzt(Date jetzt) {
@@ -34,25 +34,16 @@ public class Produkt {
         this.name = name;
     }
 
-    public String getBeschreibung() {
-        return beschreibung;
-    }
 
     public void setBeschreibung(String beschreibung) {
         this.beschreibung = beschreibung;
     }
 
-    public double getPreis() {
-        return preis;
-    }
 
     public void setPreis(double preis) {
         this.preis = preis;
     }
 
-    public int getMenge() {
-        return menge;
-    }
 
     public void setMenge(int menge) {
         this.menge = menge;
@@ -61,10 +52,11 @@ public class Produkt {
     @Override
     public String toString() {
         return "Produkt{" +
-                "Name='" + name + '\'' +
-                ", Beschreibung='" + beschreibung + '\'' +
-                ", Preis=" + preis +
-                ", Menge=" + menge +
+                "Datum= '" + jetzt + '\'' +
+                "Name= '" + name + '\'' +
+                ", Beschreibung= '" + beschreibung + '\'' +
+                ", Preis= " + preis +
+                ", Menge= " + menge +
                 '}';
     }
 }

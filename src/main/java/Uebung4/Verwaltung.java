@@ -10,14 +10,6 @@ public class Verwaltung {
         this.produktListe = produktListe;
     }
 
-    public List<Produkt> getProduktListe() {
-        return produktListe;
-    }
-
-    public void setProduktListe(List<Produkt> produktListe) {
-        this.produktListe = produktListe;
-    }
-
     public void kommandoZeile() {
         try (Scanner scanner = new Scanner(System.in)) {
             while (true) {
@@ -129,33 +121,47 @@ public class Verwaltung {
             return;
         }
 
+        boolean geaendert = false;
+
         System.out.print("Neuer Name (Enter für keine Änderung): ");
         String neuerName = scanner.nextLine();
         if (!neuerName.isEmpty()) {
             zuBearbeiten.setName(neuerName);
+            geaendert = true;
         }
 
         System.out.print("Neue Beschreibung (Enter für keine Änderung): ");
         String neueBeschreibung = scanner.nextLine();
         if (!neueBeschreibung.isEmpty()) {
             zuBearbeiten.setBeschreibung(neueBeschreibung);
+            geaendert = true;
         }
 
-        System.out.print("Neuer Preis (negativ lassen, um beizubehalten): ");
+        System.out.print("Neuer Preis (Enter für keine Änderung): ");
         double neuerPreis = scanner.nextDouble();
         if (neuerPreis >= 0) {
             zuBearbeiten.setPreis(neuerPreis);
+            geaendert = true;
         }
 
-        System.out.print("Neue Menge (negativ lassen, um beizubehalten): ");
+        System.out.print("Neue Menge (Enter für keine Änderung): ");
         int neueMenge = scanner.nextInt();
         if (neueMenge >= 0) {
             zuBearbeiten.setMenge(neueMenge);
+            geaendert = true;
         }
 
         scanner.nextLine();
-        System.out.println("Produkt erfolgreich bearbeitet!");
+
+
+        if (geaendert) {
+            zuBearbeiten.setJetzt(new Date());
+            System.out.println("Produkt erfolgreich bearbeitet und Datum aktualisiert!");
+        } else {
+            System.out.println("Keine Änderungen vorgenommen.");
+        }
     }
+
 }
 
 
