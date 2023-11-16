@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-public class HashSetTest {
+public class HashSetTestRndEinzigartig {
     public static void main(String[] args) {
         // Erstelle ein Set, um die einzigartigen Zufallszahlen zu speichern.
         Set<Integer> einzigartigeZahlen = new HashSet<>();

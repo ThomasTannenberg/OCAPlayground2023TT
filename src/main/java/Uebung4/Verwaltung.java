@@ -3,11 +3,16 @@ package Uebung4;
 import java.util.*;
 
 public class Verwaltung {
+    private ArrayList<Produkt> produktListe;
 
-    private List<Produkt> produktListe;
 
-    public Verwaltung(List<Produkt> produktListe) {
+    public Verwaltung(ArrayList<Produkt> produktListe) {
         this.produktListe = produktListe;
+    }
+
+
+    public Verwaltung(ProduktListe produktListe) {
+        this.produktListe = produktListe.getProduktListe();
     }
 
     public void kommandoZeile() {

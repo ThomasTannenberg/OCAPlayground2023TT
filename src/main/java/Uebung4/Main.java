@@ -5,11 +5,14 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Produkt> produktListe = new ArrayList<>();
+        ProduktListe produktListe = new ProduktListe();
 
         Verwaltung verwaltung = new Verwaltung(produktListe);
-
         verwaltung.kommandoZeile();
+
+        }
+
+
     }
 }
 
