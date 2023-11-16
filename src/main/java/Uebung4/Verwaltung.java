@@ -138,16 +138,20 @@ public class Verwaltung {
         }
 
         System.out.print("Neuer Preis (Enter für keine Änderung): ");
-        double neuerPreis = scanner.nextDouble();
-        if (neuerPreis >= 0) {
-            zuBearbeiten.setPreis(neuerPreis);
+        String neuerPreis = scanner.nextLine();
+        if (!neuerPreis.isEmpty()) {
+            neuerPreis = neuerPreis.replace(',', '.');
+            Double neuerPreisDouble = Double.parseDouble(neuerPreis);
+            zuBearbeiten.setPreis(neuerPreisDouble);
             geaendert = true;
         }
 
         System.out.print("Neue Menge (Enter für keine Änderung): ");
-        int neueMenge = scanner.nextInt();
-        if (neueMenge >= 0) {
-            zuBearbeiten.setMenge(neueMenge);
+        String neueMenge = scanner.nextLine();
+        if (!neueMenge.isEmpty()) {
+            neueMenge = neueMenge.replace(',', '.');
+            int neueMengeInt = Integer.parseInt(neueMenge);
+            zuBearbeiten.setMenge(neueMengeInt);
             geaendert = true;
         }
 
