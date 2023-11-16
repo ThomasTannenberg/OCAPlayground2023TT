@@ -1,4 +1,6 @@
 package Uebung3;
+
+
 import java.util.Random;
 class Monster {
     private int x, y;
@@ -38,4 +40,8 @@ class Monster {
     public int getY() {
         return y;
     }
+
+
 }
+
+
