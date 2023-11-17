@@ -18,10 +18,6 @@ public class Produkt {
         this.menge = menge;
     }
 
-    public double getPreis() {
-        return preis;
-    }
-
     public void setJetzt(Date jetzt) {
         this.jetzt = jetzt;
     }
@@ -52,10 +48,11 @@ public class Produkt {
     @Override
     public String toString() {
         return "Produkt " +
-                "Datum = " + jetzt + '\'' +
-                "Name = " + name + '\'' +
-                "Beschreibung = " + beschreibung + '\'' +
-                "Preis = " + preis +
-                "Menge = " + menge;
+                "Erstellt am = " + jetzt + "\n" +
+                "--------------------------------------------------" + "\n" +
+                "Name = " + name +
+                " ,Beschreibung = " + beschreibung +
+                " ,Preis = " + preis +
+                " ,Menge = " + menge + "\n";
     }
 }
