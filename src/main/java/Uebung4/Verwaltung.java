@@ -160,6 +160,7 @@ public class Verwaltung {
             geaendert = true;
         }
 
+        System.out.println("Mit Enter bestätigen");
         scanner.nextLine();
 
 
