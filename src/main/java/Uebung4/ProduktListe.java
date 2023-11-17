@@ -9,15 +9,9 @@ public class ProduktListe {
         produktListe = new ArrayList<>();
     }
 
-    public boolean istLeer() {
-        return produktListe.isEmpty();
-    }
 
     public ArrayList<Produkt> getProduktListe() {
         return produktListe;
     }
 
-    public void setProduktListe(ArrayList<Produkt> produktListe) {
-        this.produktListe = produktListe;
-    }
 }

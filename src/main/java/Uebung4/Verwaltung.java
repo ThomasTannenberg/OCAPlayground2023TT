@@ -18,11 +18,12 @@ public class Verwaltung {
     public void kommandoZeile() {
         try (Scanner scanner = new Scanner(System.in)) {
             while (true) {
-                System.out.println("1. Produkt hinzufügen\n" +
-                        "2. Produkt anzeigen\n" +
-                        "3. Produkt löschen\n" +
-                        "4. Produkt bearbeiten\n" +
-                        "5. Programm beenden");
+                System.out.println("""
+                        1. Produkt hinzufügen
+                        2. Produkt anzeigen
+                        3. Produkt löschen
+                        4. Produkt bearbeiten
+                        5. Programm beenden""");
                 System.out.print("Eingabe: ");
 
                 int eingabe;
@@ -121,6 +122,7 @@ public class Verwaltung {
         String name = scanner.nextLine();
 
         Produkt zuBearbeiten = findeProduktNachName(name);
+
         if (zuBearbeiten == null) {
             System.out.println("Produkt nicht gefunden!");
             return;
