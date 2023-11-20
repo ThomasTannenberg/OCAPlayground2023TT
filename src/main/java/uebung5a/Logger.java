@@ -10,7 +10,7 @@ public class Logger {
 
     private static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
     private static final String LOG_FILE = "log.txt";
-    private static final Logger instance = new Logger(); // Muss das INSTANCE ?
+    private static final Logger instance = new Logger();
     private StringBuilder logSB = new StringBuilder();
 
     private Logger() {
