@@ -6,9 +6,9 @@ public class Verwaltung {
     private ArrayList<Produkt> produktListe;
 
 
-    public Verwaltung(ArrayList<Produkt> produktListe) {
-        this.produktListe = produktListe;
-    }
+
+
+
 
 
     public Verwaltung(ProduktListe produktListe) {
@@ -62,6 +62,7 @@ public class Verwaltung {
     public void hinzufuegenProdukt(Scanner scanner) {
         System.out.print("Name: ");
         String name = scanner.nextLine();
+        //Abfrage
         System.out.print("Beschreibung: ");
         String beschreibung = scanner.nextLine();
         double preis;
