@@ -1,47 +1,51 @@
 package basics;
 
 public class ZahlensystemeTest {
+
     public static void main(String[] args) {
+
         int i = 10;
-        System.out.println("int i = 10 [dezimalzahl] " + i);
+        System.out.println(i);
+        // int i = 15; // Error: Redeklaration!
+        i = 012; // Oktal
+        System.out.println(i);
+        i = 0b11; // Binär
+        System.out.println(i);
+        i = 0x12; // Hex
+        System.out.println(i);
 
-        i = 010;
-        System.out.println("int i = 010 [oktalzahl] " + i);
-
-        i = 0x12;
-        System.out.println("int i = 0x10 [hexadezimalzahl] " + i);
-
-        i = 0b11;
-        System.out.println("int i = 0b10 [binärzahl] " + i);
+        System.out.println();
 
         int j = 100;
-        Integer k = j; // Autoboxing von primitiv zu Integer
-        j = k; // Unboxing von Integer zu primitiv
+        Integer k = j; // Autoboxing von primitiv int zu Integer
+        j = k; // Auto-Unboxing von Integer zu primitiv int
 
         System.out.println(Integer.toHexString(i));
-        System.out.println(Integer.toOctalString(i));
         System.out.println(Integer.toBinaryString(i));
+        System.out.println(Integer.toOctalString(i));
+        System.out.println(i);
 
-        long l = 1_000_000L;
+        long l = 100_00_00_00l;
 
-        System.out.println(Integer.MAX_VALUE);
-        System.out.println(Integer.MIN_VALUE);
-
-        float f = 10.0F; // bei float literalen muss IMMER ein F angehängt werden
+        float f = 10.0f; // bei float-literalen muss IMMER das f mit angegeben werden
 
         int erg1 = 2 / 3;
         System.out.println(erg1);
-
-        double erg2 = 2/3;
-        System.out.println(erg2);
-        erg2 = 2/3D;
+        double erg2 = 2 / 3.0;
         System.out.println(erg2);
 
-        erg2 = 2D /3.0 * 1.5;
+        erg2 = 2.0 / 3.2 * 1.5;
         System.out.println(erg2);
 
-        String a = Character.toString('\127');
-        System.out.println(a);
+        // byte < short < int < long < float < double
+        //         char <
 
+        char c = 'A';
+        System.out.println(c);
+        i = c;
+        i = 'a'; // primitive Widening von char auf int
+        System.out.println(i);
+        System.out.println((char)10000);
+        System.out.println("\ufff0");
     }
 }

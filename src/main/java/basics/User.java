@@ -3,9 +3,10 @@ package basics;
 import java.time.LocalDate;
 
 public class User {
-    private String firstname;
-    private String lastname;
 
+    private String firstname;
+
+    private String lastname;
 
     //private int age;
     private LocalDate birthDate;
@@ -34,12 +35,4 @@ public class User {
         this.birthDate = birthDate;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", birthDate=" + birthDate +
-                '}';
-    }
 }

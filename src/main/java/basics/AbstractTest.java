@@ -1,44 +1,43 @@
 package basics;
 
 public class AbstractTest {
+
     public static void main(String[] args) {
-        //Fahrzeug f = new Fahrzeug();
 
+        //Fahrzeug f1 = new Fahrzeug();
 
-        //polymorphie + upcasting
         Fahrzeug f2 = new PKW();
+        f2.gasGeben();
 
-        f2.beschleunigen();
+        f2 = new LKW();
+        f2.gasGeben();
 
-        f2 = new PKW();
-        f2.beschleunigen();
-
-
-
+        // DRY
     }
 }
 
 abstract class Fahrzeug {
-    private String registration;
-    private String makre;
+
+    private String kennzeichen;
+
+    private String marke;
+
     private int baujahr;
 
-    
-
-    public String getRegistration() {
-        return registration;
+    public String getKennzeichen() {
+        return kennzeichen;
     }
 
-    public void setRegistration(String registration) {
-        this.registration = registration;
+    public void setKennzeichen(String kennzeichen) {
+        this.kennzeichen = kennzeichen;
     }
 
-    public String getMakre() {
-        return makre;
+    public String getMarke() {
+        return marke;
     }
 
-    public void setMakre(String makre) {
-        this.makre = makre;
+    public void setMarke(String marke) {
+        this.marke = marke;
     }
 
     public int getBaujahr() {
@@ -49,21 +48,34 @@ abstract class Fahrzeug {
         this.baujahr = baujahr;
     }
 
-    public abstract void beschleunigen();
+    public abstract void gasGeben();
 
-
-    public abstract void bremsen();
-
+    public abstract void abbremsen();
 }
 
 class PKW extends Fahrzeug {
+
     @Override
-    public void beschleunigen() {
-        System.out.println("PKW beschleunigt um 10km/h");
+    public void gasGeben() {
+        System.out.println("PKW gibt 10 km/h mehr gas");
     }
 
     @Override
-    public void bremsen() {
-        System.out.println("PKW bremst um 10km/h");
+    public void abbremsen() {
+        System.out.println("PKW bremst um 10 km/h ab");
     }
 }
+
+class LKW extends Fahrzeug {
+
+    @Override
+    public void gasGeben() {
+        System.out.println("LKW gibt 5 km/h mehr gas");
+    }
+
+    @Override
+    public void abbremsen() {
+        System.out.println("LKW bremst um 5 km/h ab");
+    }
+}
+

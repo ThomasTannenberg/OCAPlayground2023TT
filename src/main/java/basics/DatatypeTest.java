@@ -1,55 +1,60 @@
-package basics; // Package-Anweisung, Maximal einmal pro Klasse
+package basics; // Package-Anweisung, Max. 1x pro Klasse
 
-import java.util.Date; //Alles aus anderen Packeges muss importiert werden
-//alles aus java.lang. ist immer verfügbar
+import java.util.Date; // Alles aus anderen Packages muss importiert werden
+import java.util.*;
+// alles aus java.lang ist immer verfügbar und muss nicht importiert werden!
 
+/**
+ * Diese Klasse mach nix
+ * @author tlubowiecki
+ * @since 1.8
+ */
 public class DatatypeTest {
 
-    //PascalCase = Klassen, Interfaces und Enums
-    //camelCase = variablen, Attribute und Methoden
-    //snake_case = wird in Java nicht benutzt!
-    //SCREAMING_SNAKE_CASE = Benutzt für Konstanten!
-    //packeges = kleinbuchstaben
+    // PascalCase = Klassen, Interfaces und Enums
+    // camelCase = variablen, Attribute und Methoden
+    // snake_case = Wird in Java nicht verwendet!
+    // SCREAMING_SNAKE_CASE = Konstanten
+    // kleinbuchstabeben = packeges
 
-    //de.GFN.video.converter.MP4Converter
-    //com.adobe.video.converter.MP4Converter
-    // = Namenskonventionen
+    // de.gfn.video.converter.MP4Converter
+    // com.adobe.video.converter.MP4Converter
 
-    private int anzahl; // Eigenschaft, Instanzvariable. Leben so lange wie die Instanz existiert.
-    private static int count; // Klassenvariable. Existieren so lange wie die Klasse existiert
+    private int anzahl; // Eigenschaft, Instanzvariable
+    private static int count; // Klassenvariable
 
-    /**
-     * Zum Beschreiben von Methoden.
-     * taucht in der Dokumentation auf
-     * @param name Attribut
-     */
-    private void machWas(String name){}; // Methode der Klasse DatatypeTest
+    public static void main(String[] /* Hallo Welt */ args) {
 
-    public static void main(String[] args) {
+        byte i = 100; // primitiv, lokale Variable
+        StringBuilder sb = new /* Moin */ StringBuilder(); // komplex, lokale Variable
 
-        // Lokale Variablen nur in dem einen Block sichtbar. Block = { .... }
-        int i = 100;        //primitive integer
-        long l = 100L;      //primitive long
-        char c = 'a';       //primitive char
-        float f = 1.0f;     //primitive float
-        double d = 1.0d;    //primitive double
-        boolean b = true;   //primitive boolean
-        byte by = 1;        //primitive byte
-        short sh = 1;       //primitive short
+        // komplex
+        Date heute = new Date();
 
+        // zahlen
+        // standard für Ganzzahlen
+        int ganzzahlen;
 
-        StringBuilder sb = new StringBuilder(); //komplexer Datentype
-        sb.append("xyz");                       //komplexe Typen haben Methoden
-        sb.append(123);                         //Methode
+        byte kleineGanzhallen; // max 127
 
+        long sehrGrosseZahlen;
 
-        System.out.println(sb);
-        System.out.println("Byte maximal Wert: " + Byte.MAX_VALUE);
+        // Dezimalzahlen
+        float kleinDezimalzahlen = 10.0f;
 
-        Date heute = new Date(); // Packege muss importiert werden.
-        System.out.println(heute);
+        // standard für DezimalPunktZahlen
+        double grosseDezimalzahlen;
 
+        // byte < short < int < long < float < double
 
     }
 
+    /**
+     * Der angegebene Name wird in Großbuchstaben geändert
+     * @param name Name des Users
+     * @return
+     */
+    public String machWas(String name) { // Methode
+        return name.toUpperCase();
+    }
 }

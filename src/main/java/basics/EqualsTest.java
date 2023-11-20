@@ -4,28 +4,29 @@ public class EqualsTest {
 
     public static void main(String[] args) {
 
-        //primite Datentypen werden mit gleichheitszeichen verglichen ==
+        // primitive datentypen vergleicht man mit ==
 
         int i = 10;
         int j = 20;
         char c = 'X';
-
         System.out.println(i == j);
-        System.out.println(i == c); // c wird zu int konveretiert und dann erfolgt der Vergleich
+        System.out.println(i == c); // c wird zu int konvertiert und dann erfolgt der Wertevergleich
 
-        i = j; // primitive Datentypen werden kopiert
+        i = j; // primitive Datentypen werden als Kopie weitergegeben
+
+        // Byte-Literal-Pool für Zahlen zwischen -128 bis 127
 
         Integer ii = 10;
         Integer jj = 20;
-
-        ii = jj; // Komplexe Datentypen werden nicht kopiert, sondern nur die Referenz auf das Objekt
+        ii = jj; // komplexe Datentypen werden als Referenz weitergegeben
 
         // bei komplexen Datentypen
-        // vergleicht ob die Referenzen auf das gleiche Objekt zeigen
-        // equals() ist der Werte Vergleich
+        // == vergleicht, ob die Referenzen auf das gleiche Objekt zeigen
+        // equals ist ein Wertevergleich
 
-        //Manche Objekte in Java sind Immutable (nicht veränderbar)
-        //Immutable: String, Integer, Double, Float, Long, Short, Byte, Character, Boolean
+        // Manche Objekte in Java sind Immutable d.h. nicht veränderbar
+        // Immutable: Strings, Zahlenwerte als Objekte, LocalDate etc.
+
 
     }
 }

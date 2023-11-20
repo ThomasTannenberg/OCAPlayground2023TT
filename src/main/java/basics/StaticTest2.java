@@ -11,25 +11,18 @@ public class StaticTest2 {
         StaticTest2 st2 = new StaticTest2();
         st2 = null;
 
+        st1.machWas();
 
-
-
-
-
-
-        //siehe Keynot 3
     }
 
-//    public void machWas(){
-//        System.out.println("mach was");
-//        System.out.println(o1); //statische Variablen , Klassenvariable
-//        System.out.println(o2); //Instanzvariablen
-//    }
+    public void machWas() {
+        System.out.println(o1); // Klassenvariable
+        System.out.println(o2); // Instanzvariable
+    }
 
-//    public static void machWas(){
-//        System.out.println("mach was");
-//        System.out.println(o1); //statische Variablen , Klassenvariable
-//        System.out.println(o2); //Instanzvariablen - hier nicht möglich
-//    }
+    public static void machWasStatic() {
+        System.out.println(o1); // Klassenvariable
+        // System.out.println(o2); // Instanzvariable - hier nicht sichtbar!
+    }
 
 }
