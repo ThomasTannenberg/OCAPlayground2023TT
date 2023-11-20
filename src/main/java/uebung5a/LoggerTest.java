@@ -26,7 +26,7 @@ public class LoggerTest {
 
 
         addieren(9, 3);
-        multiplizieren(712, 4);
+        multiplizieren(500, 4);
         addieren(1, 2);
 
         log.saveLogToFile();

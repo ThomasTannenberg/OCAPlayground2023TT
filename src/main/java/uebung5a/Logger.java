@@ -41,6 +41,7 @@ public class Logger {
     }
 
 
+
     public void saveLogToFile() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(LOG_FILE))) {
             writer.write(logSB.toString());
