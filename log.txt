@@ -1,0 +1,4 @@
+20.11.2023 18:19: DEBUG - uebung5a.LoggerTest/main - Starte LoggerTest
+20.11.2023 18:19: DEBUG - uebung5a.LoggerTest/addieren - Addition von 9 und 3 ergibt: 12
+20.11.2023 18:19: DEBUG - uebung5a.LoggerTest/multiplizieren - Multiplikation von 500 und 4 ergibt: 2000
+20.11.2023 18:19: DEBUG - uebung5a.LoggerTest/addieren - Addition von 1 und 2 ergibt: 3
