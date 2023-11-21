@@ -27,7 +27,8 @@ public class LoggerTest {
 
         addieren(9, 3);
         multiplizieren(712, 4);
-        addieren(1, 2);
+        addieren(5, 2);
+        multiplizieren(71, 50);
 
         log.saveLogToFile();
     }
