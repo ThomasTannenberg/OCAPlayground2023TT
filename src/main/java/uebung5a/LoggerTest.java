@@ -5,17 +5,17 @@ public class LoggerTest {
 
 
 
-    private static void add(int a, int b) {
-        int erg = a + b;
+    private static void addieren(int a, int b) {
+        int summe = a + b;
 
-        log.logStart("Addition von " + a + " und " + b + " ergibt: " + erg);
+        log.logStart("Addition von " + a + " und " + b + " ergibt: " + summe);
     }
 
     private static void multiplizieren(int a, int b) {
 
-        int erg = a * b;
+        int produkt = a * b;
 
-        log.logStart("Multiplikation von " + a + " und " + b + " ergibt: " + erg);
+        log.logStart("Multiplikation von " + a + " und " + b + " ergibt: " + produkt);
     }
 
 
@@ -25,9 +25,9 @@ public class LoggerTest {
         log.logStart("Starte LoggerTest");
 
 
-        add(9, 3);
-        multiplizieren(500, 4);
-        add(1, 2);
+        addieren(9, 3);
+        multiplizieren(712, 4);
+        addieren(1, 2);
 
         log.saveLogToFile();
     }

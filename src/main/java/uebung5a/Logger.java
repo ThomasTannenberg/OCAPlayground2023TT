@@ -22,13 +22,22 @@ public class Logger {
 
     public void logStart(String message) {
 
+        String time = LocalDateTime.now().format(FMT);
         String type = "DEBUG";
         String methodName = Logger.getMethodName();
         String className = Logger.getClassName();
-        String time = LocalDateTime.now().format(FMT);
 
 
-            logSB.append(time).append(": ").append(type).append(" - ").append(className).append("/").append(methodName).append(" - ").append(message).append("\n");
+
+            logSB.append(time)
+                    .append(": ")
+                    .append(type)
+                    .append(" - ")
+                    .append(className)
+                    .append("/")
+                    .append(methodName)
+                    .append(" - ")
+                    .append(message).append("\n");
     }
 
     private static String getMethodName() {

@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 20.11.2023 18:19: DEBUG - uebung5a.LoggerTest/main - Starte LoggerTest
 20.11.2023 18:19: DEBUG - uebung5a.LoggerTest/addieren - Addition von 9 und 3 ergibt: 12
 20.11.2023 18:19: DEBUG - uebung5a.LoggerTest/multiplizieren - Multiplikation von 500 und 4 ergibt: 2000
 20.11.2023 18:19: DEBUG - uebung5a.LoggerTest/addieren - Addition von 1 und 2 ergibt: 3
+=======
+21.11.2023 08:43: DEBUG - uebung5a.LoggerTest/main - Starte LoggerTest
+21.11.2023 08:43: DEBUG - uebung5a.LoggerTest/addieren - Addition von 9 und 3 ergibt: 12
+21.11.2023 08:43: DEBUG - uebung5a.LoggerTest/multiplizieren - Multiplikation von 712 und 4 ergibt: 2848
+21.11.2023 08:43: DEBUG - uebung5a.LoggerTest/addieren - Addition von 5 und 2 ergibt: 7
+21.11.2023 08:43: DEBUG - uebung5a.LoggerTest/multiplizieren - Multiplikation von 71 und 50 ergibt: 3550
+>>>>>>> ffea95e9a367a5f489c6244087a363a4dc62281d
