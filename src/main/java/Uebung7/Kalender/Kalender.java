@@ -15,6 +15,7 @@ public class Kalender {
     public void addTermin(Termin termin) {
         termine.add(termin);
         Collections.sort(termine);
+        System.out.println("Hallo");
     }
 
     public void displayAllTermine() {
