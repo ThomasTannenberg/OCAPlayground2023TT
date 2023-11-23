@@ -10,7 +10,7 @@ public class Produkt {
     private double preis;
     private int menge;
 
-    public Produkt(String name, String beschreibung, double preis, int menge) {
+    public Produkt(String name, String beschreibung, double preis, int menge, Date haltbarkeit) {
         jetzt = new Date();
         this.name = name;
         this.beschreibung = beschreibung;

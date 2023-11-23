@@ -2,13 +2,10 @@ package Uebung4;
 
 import java.util.*;
 
+
+
 public class Verwaltung {
     private ArrayList<Produkt> produktListe;
-
-
-
-
-
 
 
     public Verwaltung(ProduktListe produktListe) {
