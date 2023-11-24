@@ -4,13 +4,13 @@ public enum Kategorie {
     STANDARD("Standardkategorie"),
     VERDERBLICH("Verderbliche Ware");
 
-    private String beschreibung;
+    private String katArt;
 
-    Kategorie(String beschreibung) {
-        this.beschreibung = beschreibung;
+    Kategorie(String katArt) {
+        this.katArt = katArt;
     }
 
-    public String getBeschreibung() {
-        return beschreibung;
+    public String getKategorieArt() {
+        return katArt;
     }
 }

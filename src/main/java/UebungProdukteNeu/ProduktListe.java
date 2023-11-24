@@ -22,4 +22,13 @@ public class ProduktListe {
         lst.add(produkt);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (Produkt produkt : lst) {
+            sb.append(produkt.toString()).append("\n");
+        }
+        return sb.toString();
+    }
+
 }
