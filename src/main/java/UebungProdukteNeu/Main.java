@@ -18,6 +18,8 @@ public class Main {
 
         System.out.println(ProduktListe.getInstance());
 
+        ProduktListe.getInstance().safeToJson();
+
     }
 
 }

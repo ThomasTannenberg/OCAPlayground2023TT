@@ -1,13 +1,15 @@
 package UebungProdukteNeu;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
+
+
+import java.io.IOException;
 
 public class ProduktListe {
 
     private static final ProduktListe INSTANCE = new ProduktListe();
     private ArrayList<Produkt> lst;
-
-    // Privater Konstruktor
     private ProduktListe() {
         lst = new ArrayList<>();
     }
@@ -30,5 +32,7 @@ public class ProduktListe {
         }
         return sb.toString();
     }
+
+
 
 }
