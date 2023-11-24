@@ -67,8 +67,8 @@ public class KalenderApp {
         scanner.nextLine(); // Clear the buffer
 
         try {
-            Termin termin = new Termin(String time, String name, String description, Kategorie kategorie, Uhrzeit uhrzeit);
-            kalender.addTermin(termin);
+            //Termin termin = new Termin(String time, String name, String description, Kategorie kategorie, Uhrzeit uhrzeit);
+            //kalender.addTermin(termin);
             System.out.println("Termin hinzugefügt.");
         } catch (DateTimeParseException e) {
             System.out.println("Fehler beim Parsen des Datums. Bitte versuchen Sie es erneut.");
@@ -85,9 +85,9 @@ public class KalenderApp {
         String dateStr = scanner.nextLine();
 
         try {
-            LocalDate date = LocalDate.parse(dateStr, Termin.FMT.toFormat());
+            //LocalDate date = LocalDate.parse(dateStr, Termin.FMT.toFormat());
             System.out.println("\nTermine für " + dateStr + ":");
-            kalender.displayTermineForDate(date);
+            //kalender.displayTermineForDate(date);
         } catch (DateTimeParseException e) {
             System.out.println("Fehler beim Parsen des Datums. Bitte versuchen Sie es erneut.");
         }
