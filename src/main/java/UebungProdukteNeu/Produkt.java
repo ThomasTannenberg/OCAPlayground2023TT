@@ -1,7 +1,7 @@
 package UebungProdukteNeu;
 import java.time.format.DateTimeFormatter;
 
-public class Produkt implements ProduktInterface{
+public class Produkt {
     private static int idCounter = 1;
     private String name;
     private String beschreibung;

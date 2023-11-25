@@ -14,5 +14,4 @@ public class VerderblichesProdukt extends Produkt{
 
     }
 
-
 }

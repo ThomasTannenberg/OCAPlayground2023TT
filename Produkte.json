@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Apfel",
+    "beschreibung": "rot",
+    "preis": 0.99,
+    "menge": 200,
+    "kategorie": "Standardkategorie",
+    "erstellt": "24.11.2023 16:45",
+    "id": 1
+  },
+  {
+    "name": "Apfel",
+    "beschreibung": "rot",
+    "preis": 0.99,
+    "menge": 200,
+    "kategorie": "Standardkategorie",
+    "erstellt": "24.11.2023 16:45",
+    "id": 2
+  },
+  {
+    "name": "Apfel",
+    "beschreibung": "rot",
+    "preis": 0.99,
+    "menge": 200,
+    "kategorie": "Standardkategorie",
+    "erstellt": "24.11.2023 16:45",
+    "id": 3
+  },
+  {
+    "name": "Apfel",
+    "beschreibung": "rot",
+    "preis": 0.99,
+    "menge": 200,
+    "kategorie": "Standardkategorie",
+    "erstellt": "24.11.2023 16:45",
+    "id": 4
+  },
+  {
+    "mhd": "24.11.2023",
+    "name": "Hackfleisch",
+    "beschreibung": "roh",
+    "preis": 2.99,
+    "menge": 100,
+    "kategorie": "Verderbliche Ware",
+    "erstellt": "24.11.2023 16:45",
+    "id": 5
+  }
+]

@@ -1,0 +1,5 @@
+ID: 1, erstellt am: 25.11.2023 14:40, Kategorie: Standardkategorie, Name: Apfel, Beschreibung: rot, Preis: 0.99, Menge: 200
+ID: 2, erstellt am: 25.11.2023 14:40, Kategorie: Standardkategorie, Name: Apfel, Beschreibung: rot, Preis: 0.99, Menge: 200
+ID: 3, erstellt am: 25.11.2023 14:40, Kategorie: Standardkategorie, Name: Apfel, Beschreibung: rot, Preis: 0.99, Menge: 200
+ID: 4, erstellt am: 25.11.2023 14:40, Kategorie: Standardkategorie, Name: Apfel, Beschreibung: rot, Preis: 0.99, Menge: 200
+ID: 5, erstellt am: 25.11.2023 14:40, Kategorie: Verderbliche Ware, Name: Hackfleisch, Beschreibung: roh, Preis: 2.99, Menge: 100

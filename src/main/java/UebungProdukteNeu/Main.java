@@ -9,6 +9,9 @@ public class Main {
         Produkt test2 = new Produkt("Apfel", "rot", 0.99, 200);
         Produkt test3 = new Produkt("Apfel", "rot", 0.99, 200);
         VerderblichesProdukt test4 = new VerderblichesProdukt("Hackfleisch", "roh", 2.99, 100);
+
+
+
         ProduktListe.getInstance().addProdukt(test);
         ProduktListe.getInstance().addProdukt(test1);
         ProduktListe.getInstance().addProdukt(test2);
@@ -18,8 +21,7 @@ public class Main {
 
         System.out.println(ProduktListe.getInstance());
 
-        ProduktListe.getInstance().safeToJson();
-
+        ProduktListe.getInstance().saveToFile("liste.txt");
     }
 
 }
